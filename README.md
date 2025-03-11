@@ -16,9 +16,9 @@ A machine learning application that predicts music genre preferences based on ag
 
 ## Screenshots
 
-[Music Genre Predictor](1 .synthetic_data_input.png)
-2. training_model.png
-3. prediction.png
+![image](1.synthetic_data_input.png)
+![image](2.training_model.png)
+![image](3.prediction.png)
 
 ## Installation
 
