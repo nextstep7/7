@@ -2,8 +2,6 @@
 
 A comprehensive machine learning application that predicts music genre preferences based on demographic data.
 
-![Music Genre Predictor](app_preview.png)
-
 ## Overview
 
 This application demonstrates a complete machine learning workflow for predicting music genre preferences based on demographic factors like age and gender. Built with Python and Tkinter, it provides an intuitive interface for exploring data, training models, and making predictions.
