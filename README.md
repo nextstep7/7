@@ -1,118 +1,102 @@
 # Music Genre Predictor
 
-A comprehensive machine learning application that predicts music genre preferences based on demographic data.
-
-## Overview
-
-This application demonstrates a complete machine learning workflow for predicting music genre preferences based on demographic factors like age and gender. Built with Python and Tkinter, it provides an intuitive interface for exploring data, training models, and making predictions.
+A machine learning application that predicts music genre preferences based on age and gender, built with Python and Tkinter.
 
 ## Features
 
-- **Data Analysis**: Load and visualize your dataset with detailed statistics and graphs
-- **Model Training**: Train and evaluate multiple machine learning algorithms
-- **Prediction**: Make predictions based on user input and view common patterns
-- **Data Handling**: Comprehensive handling of missing values and outliers
-- **Model Storage**: Save and load trained models for future use
+- **Data Analysis**: Load and explore your dataset with detailed statistics and visualizations
+- **Data Cleaning**: Automatic detection and handling of missing values and outliers
+- **Model Training**: Train machine learning models using multiple algorithms:
+  - Gaussian Naive Bayes
+  - K-Nearest Neighbors
+  - Random Forest
+- **Interactive Prediction**: Make predictions on new data points and visualize results
+- **Model Management**: Save and load trained models for future use
+- **User-Friendly Interface**: Tab-based GUI with intuitive controls
 
-## Machine Learning Algorithms
+## Screenshots
 
-The application implements three different algorithms:
-- **Gaussian Naive Bayes**: Effective for small datasets and works well with categorical data
-- **K-Nearest Neighbors**: Good for classification where similar examples have similar outcomes
-- **Random Forest**: Robust against outliers and overfitting, providing high accuracy in many scenarios
+1. png
+2. png
+3. png
 
-## Requirements
+## Installation
+
+### Prerequisites
 
 - Python 3.7+
-- Required packages:
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - tkinter (usually included with Python)
+- Required libraries
+
+### Setup
+
+1. Clone this repository or download the source files
+
+2. Install required dependencies:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-## Installation
+3. Run the application:
 
-1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/music-genre-predictor.git
-cd music-genre-predictor
+python music2.py
 ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## Usage Guide
 
-## Usage
+### 1. Data Analysis Tab
 
-Run the application:
-```bash
-python test1.py
-```
+- **Load Data**: Import your own CSV file or use the built-in default dataset
+- **Data Information**: View statistics about your dataset including age and gender distribution
+- **Visualizations**: Explore age distribution, genre distribution, and relationships between variables
 
-### Data Analysis Tab
-- Load your own CSV data or use the built-in default dataset
-- View dataset statistics and visualizations
-- Analyze data quality including checking for missing values and outliers
+### 2. Model Training Tab
 
-### Model Training Tab
-- Select a machine learning algorithm
-- Set test/train split ratio
-- Train the model and view performance metrics
-- Save the trained model for future use
+- **Model Selection**: Choose between Gaussian Naive Bayes, K-Nearest Neighbors, and Random Forest
+- **Test Size**: Adjust the train-test split ratio
+- **Training Results**: View accuracy, classification report, and confusion matrix
+- **Save/Load Model**: Preserve your trained model for future use
 
-### Prediction Tab
-- Input age and gender to get a predicted music genre preference
-- View confidence levels for predictions
-- Explore common patterns found in the data
+### 3. Prediction Tab
 
-## Dataset Format
+- **Input Parameters**: Enter age and select gender
+- **Make Predictions**: Get instant genre predictions
+- **Common Patterns**: View insights about genre preferences based on age and gender
 
-Your CSV file should include at least these columns:
-- `age`: Numeric age value
-- `gender`: Binary indicator (0 for female, 1 for male)
-- `genre`: Music genre category (target variable)
+### 4. About Tab
 
-Example:
+- View information about the application and its features
+
+## Data Format
+
+The application expects CSV files with at least these columns:
+- `age`: Numeric age values
+- `gender`: Binary (0 = Female, 1 = Male)
+- `genre`: String values representing music genres
+
+Example CSV format:
 ```
 age,gender,genre
-24,1,HipHop
-31,0,Classical
-27,1,Jazz
+25,1,HipHop
+30,0,Classical
+22,1,Rock
+...
 ```
 
-## Project Structure
+## How It Works
 
-```
-music-genre-predictor/
-│
-├── test1.py                # Main application file
-├── requirements.txt        # Dependencies
-├── README.md               # This readme file
-├── screenshots/            # Application screenshots
-│   └── app_preview.png     # Main application preview
-├── models/                 # Saved model files
-│   └── example_model.pkl   # Example pre-trained model
-└── data/                   # Sample datasets
-    └── music.csv           # Example dataset
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. **Data Processing**: The application loads and preprocesses your data, identifying and handling missing values and outliers
+2. **Feature Scaling**: Age and gender values are standardized
+3. **Model Training**: Machine learning algorithms are trained on your data
+4. **Evaluation**: Models are evaluated using metrics like accuracy and confusion matrix
+5. **Prediction**: New data points can be classified into music genres
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+(c)Fredrik Barré 2025
 
 ## Acknowledgments
 
-- The application was developed as part of a Python and Machine Learning course
-- Implements visualization techniques with Matplotlib and Seaborn
-- Uses Scikit-learn for machine learning algorithms
+- Built with scikit-learn, pandas, and Tkinter
+- Created for educational and demonstration purposes
